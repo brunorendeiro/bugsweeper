@@ -55,6 +55,9 @@ type UiStrings = {
   lossBody: string
   footer: string
   howTo: string
+  cookieBody: string
+  cookieAccept: string
+  cookieReject: string
 }
 
 export const ui: Record<Locale, UiStrings> = {
@@ -93,6 +96,9 @@ export const ui: Record<Locale, UiStrings> = {
     lossBody: 'O tabuleiro completo, com todas as vulnerabilidades que lá estavam:',
     footer: 'Um jogo de Bruno Rendeiro sobre erros comuns de segurança web.',
     howTo: 'Clique para revelar · botão direito (ou modo bandeira) para marcar uma suspeita',
+    cookieBody: 'Uso o Google Analytics para perceber quantas pessoas visitam este projeto. Aceitas cookies analíticos?',
+    cookieAccept: 'Aceitar',
+    cookieReject: 'Recusar',
   },
   en: {
     title: 'BugSweeper',
@@ -129,6 +135,9 @@ export const ui: Record<Locale, UiStrings> = {
     lossBody: 'The full board, with every vulnerability it contained:',
     footer: 'A game by Bruno Rendeiro about common web security mistakes.',
     howTo: 'Click to reveal · right-click (or flag mode) to mark a suspicion',
+    cookieBody: 'I use Google Analytics to understand how many people visit this project. Do you accept analytics cookies?',
+    cookieAccept: 'Accept',
+    cookieReject: 'Reject',
   },
   de: {
     title: 'BugSweeper',
@@ -165,5 +174,8 @@ export const ui: Record<Locale, UiStrings> = {
     lossBody: 'Das vollständige Feld mit allen enthaltenen Schwachstellen:',
     footer: 'Ein Spiel von Bruno Rendeiro über häufige Web-Sicherheitsfehler.',
     howTo: 'Klicken zum Aufdecken · Rechtsklick (oder Flaggenmodus) zum Markieren eines Verdachts',
+    cookieBody: 'Ich verwende Google Analytics, um zu verstehen, wie viele Menschen dieses Projekt besuchen. Akzeptierst du Analyse-Cookies?',
+    cookieAccept: 'Akzeptieren',
+    cookieReject: 'Ablehnen',
   },
 }

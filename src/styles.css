@@ -93,7 +93,10 @@ button { cursor: pointer; }
 .glossary .vuln-card.locked { opacity: .55; border-style: dashed; }
 .glossary .vuln-card p { font-size: 11px; }
 
-footer { margin-top: 50px; padding-top: 18px; border-top: 2px solid var(--line); color: var(--muted); font-size: 11px; text-align: center; }
+footer { display: flex; flex-direction: column; gap: 6px; margin-top: 50px; padding-top: 18px; border-top: 2px solid var(--line); color: var(--muted); font-size: 11px; text-align: center; }
+footer a { color: var(--muted); text-decoration: underline; }
+footer a:hover { color: var(--accent); }
+.powered-badge { color: var(--muted); font-size: 10px; }
 
 @media (max-width: 600px) {
   .app { padding: 18px 14px 44px; }
@@ -101,3 +104,10 @@ footer { margin-top: 50px; padding-top: 18px; border-top: 2px solid var(--line);
   .flag-toggle { margin-left: 0; }
   .glossary-grid { grid-template-columns: 1fr; }
 }
+
+.cookie-consent { position: fixed; z-index: 50; left: 20px; right: 20px; bottom: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; max-width: 640px; margin: 0 auto; padding: 18px 20px; border: 2px solid var(--text); border-radius: 10px; background: var(--panel); box-shadow: 6px 6px 0 0 var(--shadow); }
+.cookie-consent p { flex: 1 1 260px; margin: 0; font-size: 13px; color: var(--muted); }
+.cookie-actions { display: flex; gap: 10px; }
+.cookie-actions button { padding: 9px 16px; border: 2px solid var(--text); border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer; }
+.cookie-reject { background: none; color: var(--text); }
+.cookie-accept { background: var(--accent-2); color: #171410; }

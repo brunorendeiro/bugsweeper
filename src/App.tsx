@@ -15,6 +15,8 @@ import {
 } from './lib/board'
 import { getVulnerability } from './data/vulnerabilities'
 import { detectLocale, locales, severityLabels, ui, type Locale } from './i18n'
+import { getStoredConsent, loadAnalytics } from './analytics'
+import CookieConsent from './CookieConsent'
 
 type Mode = 'aprendizagem' | 'classico'
 type Status = 'ready' | 'playing' | 'won' | 'lost'
@@ -46,6 +48,10 @@ export default function App() {
     window.localStorage.setItem('bugsweeper-locale', locale)
     document.documentElement.setAttribute('lang', locale)
   }, [locale])
+
+  useEffect(() => {
+    if (getStoredConsent() === 'granted') loadAnalytics()
+  }, [])
 
   useEffect(() => {
     if (status !== 'playing') return
@@ -273,6 +279,11 @@ export default function App() {
       </div>
     </section>
 
-    <footer>{t.footer}</footer>
+    <footer>
+      <span>{t.footer}</span>
+      <a href="https://vibe-portfolio-one.vercel.app/" target="_blank" rel="noreferrer">Created by Bruno Rendeiro</a>
+      <span className="powered-badge">⚡ Powered by AI</span>
+    </footer>
+    <CookieConsent locale={locale} />
   </div>
 }
