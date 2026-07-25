@@ -21,7 +21,7 @@ import CookieConsent from './CookieConsent'
 type Mode = 'aprendizagem' | 'classico'
 type Status = 'ready' | 'playing' | 'won' | 'lost'
 
-const numberColors = ['', '#4d7cff', '#52c774', '#ff5c5c', '#c084fc', '#c9860a', '#3fd0c9', '#f4efe4', '#9c9587']
+const numberColors = ['', '#2f4d70', '#3f6b3f', '#a13a20', '#6a3f7a', '#8a5a12', '#2f6f6b', '#2c1c0e', '#5c4630']
 
 function formatTime(seconds: number): string {
   const m = Math.floor(seconds / 60).toString().padStart(2, '0')
