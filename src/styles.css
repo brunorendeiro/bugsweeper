@@ -89,7 +89,7 @@ button { cursor: pointer; }
   padding-bottom: 16px;
   border-bottom: 3px double var(--ink);
 }
-.brand { display: flex; align-items: center; gap: 14px; }
+.brand { display: flex; align-items: center; gap: 14px; margin: 0; }
 .brand-mark {
   display: grid;
   place-items: center;
