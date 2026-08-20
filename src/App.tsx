@@ -15,7 +15,7 @@ import {
 } from './lib/board'
 import { getVulnerability } from './data/vulnerabilities'
 import { detectLocale, locales, severityLabels, ui, type Locale } from './i18n'
-import { getStoredConsent, loadAnalytics } from './analytics'
+import { getStoredConsent, loadAnalytics, loadAds } from './analytics'
 import CookieConsent from './CookieConsent'
 
 type Mode = 'aprendizagem' | 'classico'
@@ -50,7 +50,10 @@ export default function App() {
   }, [locale])
 
   useEffect(() => {
-    if (getStoredConsent() === 'granted') loadAnalytics()
+    if (getStoredConsent() === 'granted') {
+      loadAnalytics()
+      loadAds()
+    }
   }, [])
 
   useEffect(() => {
