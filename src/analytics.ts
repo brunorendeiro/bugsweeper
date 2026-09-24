@@ -40,8 +40,13 @@ export function loadAds() {
   script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4561414438757131`
   document.head.appendChild(script)
 
+  // Auto ads (enable_page_level_ads) ficam desligados: numa app de ecrã único como
+  // esta, o posicionamento automático da Google acaba por colocar anúncios em ecrãs
+  // com pouco ou nenhum conteúdo (o tabuleiro de jogo), o que viola as políticas do
+  // AdSense. Preferimos uma unidade de anúncio manual (AdSlot), colocada apenas no
+  // ecrã de fim de jogo, onde há conteúdo real (estatísticas e texto).
   window.adsbygoogle = window.adsbygoogle || []
-  window.adsbygoogle.push({ google_ad_client: 'ca-pub-4561414438757131', enable_page_level_ads: true })
+  window.adsbygoogle.push({ google_ad_client: 'ca-pub-4561414438757131' })
 }
 
 export function setConsent(value: Consent) {

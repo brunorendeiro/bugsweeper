@@ -363,6 +363,9 @@ button { cursor: pointer; }
 }
 .primary:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--line-strong); }
 
+.ad-slot { margin: 24px auto 0; max-width: 420px; padding: 12px; border: 1.5px dashed var(--line-strong); background: var(--paper); }
+.ad-label { display: block; margin-bottom: 8px; color: var(--ink-faint); font: 10px 'Special Elite', monospace; text-transform: uppercase; letter-spacing: .12em; text-align: center; }
+
 .glossary { margin-top: 42px; }
 .glossary-head { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 12px; border-bottom: 3px double var(--ink); }
 .glossary-head h2 { margin: 0; font: 400 24px 'Rye', cursive; color: var(--ink); }

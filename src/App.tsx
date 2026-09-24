@@ -17,6 +17,7 @@ import { getVulnerability } from './data/vulnerabilities'
 import { detectLocale, locales, severityLabels, ui, type Locale } from './i18n'
 import { getStoredConsent, loadAnalytics, loadAds } from './analytics'
 import CookieConsent from './CookieConsent'
+import AdSlot from './AdSlot'
 
 type Mode = 'aprendizagem' | 'classico'
 type Status = 'ready' | 'playing' | 'won' | 'lost'
@@ -253,6 +254,7 @@ export default function App() {
           </div>
         )}
         <button className="primary" onClick={() => resetGame(difficulty, mode)}>{t.playAgain}</button>
+        <AdSlot />
       </section>
     )}
 
